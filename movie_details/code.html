@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Midnight Echo - Obsidian Cinema</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;600;700;800;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#f8f9ff",
+                    "surface-tint": "#ffb4aa",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#5e3f3b",
+                    "outline": "#af8782",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "tertiary-fixed-dim": "#a7c8ff",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed-variant": "#004689",
+                    "tertiary": "#a7c8ff",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-surface-variant": "#e9bcb6",
+                    "on-primary-fixed": "#410001",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#001b3c",
+                    "background": "#131313",
+                    "secondary-container": "#921512",
+                    "tertiary-container": "#0072d7",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "primary-fixed": "#ffdad5",
+                    "on-secondary": "#690003",
+                    "on-primary-container": "#fff7f6",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "primary": "#ffb4aa",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-primary": "#c0000c",
+                    "primary-container": "#e50914",
+                    "on-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#410001",
+                    "on-secondary-container": "#ff9f93",
+                    "on-tertiary": "#003061",
+                    "on-primary-fixed-variant": "#930007",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#8e1210",
+                    "surface-bright": "#3a3939",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-dim": "#131313",
+                    "secondary": "#ffb4aa",
+                    "surface-variant": "#353534",
+                    "on-primary": "#690003"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-hero-gradient {
+            background: linear-gradient(to top, #131313 0%, rgba(19, 19, 19, 0.4) 50%, rgba(19, 19, 19, 0) 100%);
+        }
+        .text-shadow-lg {
+            text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl flex justify-between items-center px-8 h-20 w-full no-border bg-gradient-to-b from-zinc-900/50 to-transparent">
+<div class="text-2xl font-black tracking-tighter text-red-600 uppercase font-['Be_Vietnam_Pro'] hover:scale-105 transition-transform duration-300 cursor-pointer">
+            Obsidian Cinema
+        </div>
+<div class="hidden md:flex items-center space-x-10 font-['Be_Vietnam_Pro'] tracking-tight">
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">Home</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">Discovery</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">For You</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">My List</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-zinc-400 hover:text-zinc-100 hover:scale-105 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-zinc-400 hover:text-zinc-100 hover:scale-105 transition-all">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full flex items-end pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="dramatic cinematic shot of a lone figure standing in a foggy dark alleyway at midnight with a single flickering neon blue light and heavy atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6R1qW7wOKaxGxBk6EK3kLdQTGjx9nPje04W2MRL7jCqp1JC6x9Y1oM8AZZQdzAirkoP7Bn-MI1VHnZ9dE2FUPkWPw7EpQkwke39aaJS5ZkDzgvOSD5tqo-v59VJY-_CVL8oipAMXgDUUnlZf1gH_2TSLDSjIo9nYNST740VSOlothwan7ciW_iUGW0lgVEAPG-1ttk35Qm9f0Fb46fBMX0TnWpcR5k-RhHIi_GwpxK9dQ3V8uc6ZIq3ZCNYv0o5_PwagN4relK7E"/>
+<div class="absolute inset-0 bg-hero-gradient"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 md:px-16 max-w-5xl">
+<div class="flex items-center space-x-3 mb-4">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-sm text-[10px] font-bold tracking-[0.2em] uppercase font-label">NEW RELEASE</span>
+<span class="text-zinc-300 text-xs font-medium tracking-widest font-label uppercase">4K ULTRA HD</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-white mb-6 text-shadow-lg leading-tight">
+                    The Midnight Echo
+                </h1>
+<div class="flex flex-wrap items-center gap-6 mb-8">
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-lg mr-2" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-lg text-white">4.8</span>
+<span class="text-zinc-400 ml-1 text-sm">/ 5</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="text-zinc-300 font-medium">2024</span>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="text-zinc-300 font-medium">2h 14m</span>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="text-zinc-300 font-medium">Psychological Thriller</span>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container hover:bg-red-700 text-on-primary-container px-10 py-4 rounded-lg font-bold flex items-center space-x-3 shadow-[0_0_20px_rgba(229,9,20,0.2)] transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Play Movie</span>
+</button>
+<button class="bg-surface-bright/20 backdrop-blur-md border border-outline-variant/20 hover:bg-surface-bright/40 text-white px-10 py-4 rounded-lg font-bold flex items-center space-x-3 transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">add</span>
+<span>My List</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Movie Details Content -->
+<section class="px-8 md:px-16 py-20 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-24">
+<!-- Left: Synopsis -->
+<div class="lg:col-span-2">
+<h2 class="font-headline text-3xl font-bold mb-8 tracking-tight text-white">The Synopsis</h2>
+<p class="text-zinc-400 text-lg leading-relaxed mb-12 font-body font-light">
+                        In a city where the sun hasn't risen in a decade, a reclusive sound engineer discovers a series of rhythmic frequencies hidden within the urban noise that appear to predict the future. As he delves deeper into the 'Midnight Echo', he realizes the source isn't terrestrial—and it’s starting to echo back his own darkest secrets. A haunting exploration of memory, sound, and the ghosts we create in the dark.
+                    </p>
+<h2 class="font-headline text-3xl font-bold mb-8 tracking-tight text-white">Cast &amp; Crew</h2>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-4 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="portrait of a middle-aged actor with short graying hair and intense blue eyes against a dark studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAurHXewk-JuUbe_yww2C4AmyN1Q6Z4jmRUC7a20QZuPXtiiFTK3sT9gWETpJs9LkqigOMvyEAhpWCBQ_dqIo6skw-ZCn1K86MwSOMb9VRq_wPogmxK5k0J1KQ8Z_qYjkyaawc6o7trghExs_A843agWo4nQEiiQIombnT1fHVg16mIuKMWYti9JLAb5bTjt0MDpN3h2kvJM7aYfSD8d-VqVSNLf7Y6Tcs_k48dA2d4xMJCffED6h6K5zP3IREpSuPuTmsVdDFimR8"/>
+</div>
+<h4 class="text-white font-bold text-sm mb-1">Julian Vance</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest">Elias Thorne</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-4 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="portrait of a young actress with long dark hair and thoughtful expression in cinematic soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Nwv575_9LBPH8ohZLE-gWF7Zhyo_nVBln-Pi_dTjUKrpvPlwdd8gVuOJ52z5zImWPPyG7fUqqdPJ9g0YeiwIdxSD9W5R3_TvRAtXc4jC5iIdrsaZnwMk0MOGADHJG-Y58SozVSu7PVQbSu7B8JI6ZWVFGEYPjJ6ZlIXWQLIbR6p61vbpj9z2XdStC9LXdGW3GSiG_z_v6bWhIErF6Rkc5HhyuIGhn0EDg2AaLnpz3RV7HOYbO2_rKEyvjDKXdrf4Arldkf1_W8E"/>
+</div>
+<h4 class="text-white font-bold text-sm mb-1">Elena Rossi</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest">Sarah Kent</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-4 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="portrait of a man with spectacles and a beard looking intellectual and serious" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEBlhPm8gDwcgCij18RvfmiMsly5wfPUIoNNF1MHmdnWRglpg0pxDcppMLOQfK4vK6_76ZnxTFe0zidL8VVHK_N_A_jp_4CA4WZjMRfqYVBnixMBxGL9KMtF8XxqALYgAhHpsaJu1LxPzqlVHhEGFyFD7hiGqHObb2zHkie8lnLQTB64rzLvcGFl2NnwHXn4C9CBMkBgwGlcmjxZv-GLNPqkV1_IxaKN4J2G3x5u2lnf6fcjh5g109N4bJJUojTUtyrKyFNxcdqY0"/>
+</div>
+<h4 class="text-white font-bold text-sm mb-1">David Chen</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest">The Architect</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-4 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="portrait of a woman with short blonde hair and striking features in a dramatic noir style shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPV3pEI55HMBfJiLIHYaaV2KfxoJYWIoGpNMb4Y6F85ydi5sdIl7MOWuzThvn3UqvLrKODWuCt9sg8cvR-B7OQdZ5IEGOfRJrx5T5edwvjGAPOibQIeGSr3E2UMhgJJAu_Qi2CxvJgoBzjo6SypzsARHKPiAU4pK2xbR0rmKx6OKKqiZetFz2eWIYqQiXV4hzXTrbedft-1pswSJyiyRdG9DQjm1UwVhp2ZSLMrSAeUQ1WgiT4bOWcQf4Sjmdo28N9fCA4SuDCA5k"/>
+</div>
+<h4 class="text-white font-bold text-sm mb-1">Sienna Miller</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest">Director</p>
+</div>
+</div>
+</div>
+<!-- Right: Metadata Sidebar -->
+<div class="space-y-12">
+<div class="p-8 rounded-2xl bg-surface-container-low/50 backdrop-blur-sm border border-outline-variant/10">
+<h3 class="font-headline text-xl font-bold mb-6 text-white">Information</h3>
+<div class="space-y-6">
+<div>
+<label class="text-zinc-500 text-xs font-bold uppercase tracking-widest block mb-1">Studio</label>
+<span class="text-white">Obsidian Original Studios</span>
+</div>
+<div>
+<label class="text-zinc-500 text-xs font-bold uppercase tracking-widest block mb-1">Language</label>
+<span class="text-white">English (Atmos 7.1)</span>
+</div>
+<div>
+<label class="text-zinc-500 text-xs font-bold uppercase tracking-widest block mb-1">Rating</label>
+<span class="text-white px-2 py-0.5 border border-zinc-700 text-xs rounded">R (Strong Language, Violence)</span>
+</div>
+<div>
+<label class="text-zinc-500 text-xs font-bold uppercase tracking-widest block mb-1">Release Date</label>
+<span class="text-white">November 14, 2024</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline text-xl font-bold text-white">Tags</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs text-zinc-300">Sci-Fi</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs text-zinc-300">Mystery</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs text-zinc-300">Atmospheric</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs text-zinc-300">Noir</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- More Like This Section -->
+<section class="px-8 md:px-16 py-20 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-10">
+<h2 class="font-headline text-3xl font-bold tracking-tight text-white">More Like This</h2>
+<a class="text-primary-container font-bold text-sm uppercase tracking-widest hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+<!-- Movie Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="cinematic movie poster showing a futuristic skyline under a purple haze with silhouettes of flying vehicles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFgqZW4DkNTSPSOo-VLg4sEZQyZY3N33ABJSKXSCDrXRXilS-SH4pwqx8l4hImEBKFWJIFW5WHKYlCGgWmdOFYyhXeVBUEDKLITS6m5_zqY1hoCmMlzUK62fiJh5PYo-YBZ6yByYUmPt_5hAQVEh9CN0qDRhoVIzo5iMpoD2ueTolw7nUUT2pdkpJkkn1aKEcJmqDZgdO_eURSeNXXT0aluxzNg8GaPFRGxOTez9S4_FeypVaHNculDqL5MoLuFqdwsmZIAM-vizU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+<button class="w-full bg-white text-black py-2 rounded font-bold text-xs">More Info</button>
+</div>
+</div>
+<h4 class="text-white font-bold text-sm truncate">Neon Horizon</h4>
+<p class="text-zinc-500 text-xs">2023 • Sci-Fi Thriller</p>
+</div>
+<!-- Movie Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="gritty movie poster of a dark library with dust motes dancing in a shaft of light hitting an old book" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ0TQuSxiRG2JiEf-IGuLCcMJI1kp-HzOUEXX7-B_JG5Tw5AEsrsPKC5Bsbl1kTYINhlfieI1GWSofBHL7EripXPdojGwXGWjLLDPEMrG54RtwQ8_13F2iQ_SZiliGDsVYk25vV3c7GmPoMyB9X6yv4bHt5v1P3KeI2Y8g4rkSLRztErj9bv-bCh0loESorc0gV6qUVeOrsTxJzoTV6UPH-jIqR_XaqfrGaxXqpoM10JuD64lJUFf8SVlo2NS3Mdn2-CIFzL5v2Fc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-white font-bold text-sm truncate">The Archivist</h4>
+<p class="text-zinc-500 text-xs">2024 • Mystery</p>
+</div>
+<!-- Movie Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="atmospheric shot of a rainy street at night reflecting city lights in vibrant oranges and blues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEoImfMka95pzQHVDCAp_dRSjbPgGAMTKWGoJ8hpfrj0ooKLI_WAvXlsDeh2OQ_uvz4faBO8PVLGOw-yjBEGrbcoJrp8SQo0YWk8YR33a3Wfb3Na1gWqLEd-kkP1OL7TKEL4Wrs_UciQrOQU2YIHe-E8MgG7qjtGtgeiavxD-ecpPtUVNGGXfrSI575unpeT4yKkm__t0X6mw9fuwtbKZSfLei--VR5hbAilhJYkuHIYfthCKLcPmxqINaDQljD5q_DbJ3f9NT0Xk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-white font-bold text-sm truncate">Vapor Trace</h4>
+<p class="text-zinc-500 text-xs">2022 • Cyberpunk</p>
+</div>
+<!-- Movie Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="eerie forest with thick fog and twisted trees in cold blue and black tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXLRpDDSzIPRchD-TOFvOSZVmH6Z8uAYPOhclb6Ji5_DZARNcGJyVi7iMYuv-9h1QvaJ231QzIiSKrZXlu4CvUTryrEPODfZkDcLIQxd-tq7yQ93HbAZVVBN5mwEEV9x-wWact1VxpaSJG_tpSxQAxgSFr17jrk-RX-sOdEdE7Ixclrx--0fcWdpTEkMuNfugASvFJ3DapRS4Ma_7Mk8rtNgYWDbCx-R6T10sE2TmmshWv49sANUpaDp3DgdpJsUeA4zDHhDir2iU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-white font-bold text-sm truncate">Shattered Pines</h4>
+<p class="text-zinc-500 text-xs">2023 • Horror</p>
+</div>
+<!-- Movie Card 5 -->
+<div class="group cursor-pointer hidden lg:block">
+<div class="relative aspect-[2/3] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="cinematic shot of a high-tech surveillance room with multiple glowing monitors in a dark environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDouywU6ClitSKJb9mkeBwy8irTgQ1VtOp2jVPChq6L0IAgdGN5a3kwb-dMsaytRe8_qDXiHoGosEjpdbmbFwOPkL4tYBHwuZ8t3haXViAHPdwo_G4KqbuRYcqppMuo3aw8US6jRGfUeY5BzTTIIq3PWXa0ILJw444Bga-guW7mEq3Ay3NCKMSDGBleqke8vEcRvdr3nbGL-ZISMVDeP5PrMT8dOcq6VgycHU-hX0hITA1tU6lSFl0OpULwh988O3uxcqygLkMUCuM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-white font-bold text-sm truncate">Signal Loss</h4>
+<p class="text-zinc-500 text-xs">2024 • Tech-Thriller</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-12 mt-auto border-t border-zinc-800/50">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 font-['Inter'] text-sm tracking-wide">
+<div class="text-lg font-bold text-zinc-100">
+                Obsidian Cinema
+            </div>
+<div class="flex flex-wrap justify-center gap-8 text-zinc-500">
+<a class="hover:text-red-600 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-red-600 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-red-600 transition-colors" href="#">Help Center</a>
+<a class="hover:text-red-600 transition-colors" href="#">Contact Us</a>
+</div>
+<div class="text-zinc-500 text-xs">
+                © 2024 Obsidian Cinema. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

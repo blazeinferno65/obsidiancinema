@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#f8f9ff",
+                    "surface-tint": "#ffb4aa",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#5e3f3b",
+                    "outline": "#af8782",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "tertiary-fixed-dim": "#a7c8ff",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed-variant": "#004689",
+                    "tertiary": "#a7c8ff",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-surface-variant": "#e9bcb6",
+                    "on-primary-fixed": "#410001",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#001b3c",
+                    "background": "#131313",
+                    "secondary-container": "#921512",
+                    "tertiary-container": "#0072d7",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "primary-fixed": "#ffdad5",
+                    "on-secondary": "#690003",
+                    "on-primary-container": "#fff7f6",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "primary": "#ffb4aa",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-primary": "#c0000c",
+                    "primary-container": "#e50914",
+                    "on-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#410001",
+                    "on-secondary-container": "#ff9f93",
+                    "on-tertiary": "#003061",
+                    "on-primary-fixed-variant": "#930007",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#8e1210",
+                    "surface-bright": "#3a3939",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-dim": "#131313",
+                    "secondary": "#ffb4aa",
+                    "surface-variant": "#353534",
+                    "on-primary": "#690003"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, #131313 0%, rgba(19, 19, 19, 0.6) 40%, rgba(19, 19, 19, 0) 100%);
+        }
+        .hero-side-gradient {
+            background: linear-gradient(to right, #131313 0%, rgba(19, 19, 19, 0.4) 30%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl flex justify-between items-center px-8 h-20 w-full font-['Be_Vietnam_Pro'] tracking-tight no-border bg-gradient-to-b from-zinc-900/50 to-transparent shadow-none">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black tracking-tighter text-red-600 uppercase">Obsidian Cinema</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-white font-bold border-b-2 border-red-600 pb-1 hover:scale-105 transition-transform duration-300" href="#">Home</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">Discovery</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">For You</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">My List</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-zinc-400 hover:text-white transition-colors hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-zinc-400 hover:text-white transition-colors hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-lg overflow-hidden border border-zinc-800 hover:scale-105 transition-transform duration-300 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a man with clean skin and neutral expression, professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1i4Kzbhk9-2WZPpwxf_ubNR3ruPrCpmpksaln0aLTGb_C8CYa8K2dnj4n2ZXDzrd_TQeNY1xRBSdNJYOA5leCLKAa4pFnqa28LljV2l6bSJ6b3sk5dw7On6uV_zIEmpu9mFKnAdbyQf5M3XKNRAx6cReVDiP1A6MkpN3Rog_p3Sb_Mpy9UcaRh9fysiSvd9JZrOXjjqjyEu4eB2_HVNTlFgvTqq2uwc-jmJP0ozO8bs7Fiu62aTgrRgIVPZQdafNfcF08Go-UbfI"/>
+</div>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative h-[921px] w-full overflow-hidden">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover" data-alt="wide cinematic shot of a futuristic cyberpunk city at night with neon lights reflecting in puddles and rain falling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD42NPo-mKJfSeGbtOCWQ7WqNWewgjk1N3nKaKgY9qbm5cTqZG_ra9u-qYSj5_MgX_ungTjg8Rb9bCqcCeOZk75GcnChLX1fIkBqe6IABXSshTIPFEbD7zzfs0bWmhzNx81ZNRu9uFZSrQGOfczOK7ZNC67D0QO8OrgYx2nrmUX0fAyWiLP9YH2qhWdCmkCSanbJqxjlDgUYEzXfAW5DDfG9m6MU1uW7zBde4gFcgjcsJYLNco12uewyPQiOSOVjNjn0wb29QWImf8"/>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute inset-0 hero-side-gradient"></div>
+</div>
+<div class="relative h-full flex flex-col justify-end px-8 md:px-16 pb-24 max-w-4xl">
+<span class="font-label text-sm font-bold tracking-[0.2em] text-primary-container mb-4 uppercase">New Release</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-tight">NEON <br/> DRIFTERS</h1>
+<p class="text-zinc-300 text-lg md:text-xl mb-8 leading-relaxed max-w-2xl font-light">
+                    In a city where memories are traded like currency, a rogue detective uncovers a conspiracy that threatens to erase the identity of everyone in Neo-Tokyo.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="flex items-center gap-3 bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(229,9,20,0.3)]">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Play Now
+                    </button>
+<button class="flex items-center gap-3 bg-surface-bright/40 backdrop-blur-md border border-outline-variant/30 text-white px-8 py-4 rounded-lg font-bold hover:bg-surface-bright/60 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+                        More Info
+                    </button>
+</div>
+</div>
+</section>
+<!-- Content Rows -->
+<div class="relative z-10 -mt-16 space-y-16 pb-24">
+<!-- Trending Now -->
+<section class="pl-8 md:pl-16">
+<h2 class="font-headline text-2xl font-bold mb-6 tracking-tight flex items-center gap-3">
+                    Trending Now
+                    <span class="material-symbols-outlined text-primary-container" data-icon="trending_up">trending_up</span>
+</h2>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pr-8 md:pr-16">
+<!-- Movie Card 1 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="dramatic movie poster showing a lone astronaut standing on a red dusty planet looking at a distant nebula" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiQnu_g8Z65ksi_yy8otf2cf4DAuCggBhj-j8aA4_MPOC1h4EOBsI7okY_qIT0Nq12bridHUUCELX66bXi8Q7uvFTopE2ChoUAU2cDgqo--vmnGMbXswB-eIPuh72DLO6a1CHViDDpHCROOxr0G7zrG-XZKTSdJ0ZuYzKWgY8F3LOCx6CGpH0fG7rMQhaR0oZYAPKRrcs5WkFqynlh-Z7Wi3jqhVT9fzuiuYDWS-qONsfXGU6napsdHXCaF69uMZjMQlwI771d4ew"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Red Horizon</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Sci-Fi • 2h 15m</p>
+</div>
+</div>
+<!-- Movie Card 2 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="atmospheric shot of a misty dark forest with a single mysterious light glowing through the trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyFeFBlG5UTqea6Qge25MUuyQQe-txpZox8-nnQTyGUg4oGQE5bHFsCHp6dyn1EOd1smFLr2wfZ-Ie9PmvkDAJtdydNPip0Te_oHMXSLpd9xTofqle0MUNj6W6c8n86D0Xx9jaERCnQJSbpWA7Ufm1htqmwt1jYLeKITqbbgn4O1rQWM66-JDxRRkB9SmlFzjwqMSSllrjd-XFiKfNlFO_0jBHzN1vbOJigiOqn3O7JGMsSYzs3m6UkjLiax-MqhK98m03pgnmFwo"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">The Silent Woods</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Thriller • 1h 45m</p>
+</div>
+</div>
+<!-- Movie Card 3 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="dynamic close-up of a high-speed sports car racing through a tunnel with motion blur neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAy7nMPCwqHf4n6rlzHN9jcM0hvWEC5Q9bdgpgUikJD6zga6t9zOIlVt6kCzjAgK0ZGY5UitqtlScp8eU4w6CjLZTi2snVe69as3g8leTo51Ei-ng8sxQoBHCvmtYKGYW-jr1lRPBlnx28fhFtpU9i-7ynXQQjaWrSD95qEDnfn027OsvOjfAnsrbGpIN1eZXN6pZFDmuIMl8ahi855SV7O9dC7M0K-HXGUJxRZIdLVXukMGuf9Xn9HiHCD_2own2C2GeHrUEpbyg"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Velocity</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Action • 2h 05m</p>
+</div>
+</div>
+<!-- Movie Card 4 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="minimalist silhouette of a man walking across a vast white salt flat under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcBvZwTTeyUREbDRLY8YWYTByZxut3Nc_wXmKyymCIz7aBWSpv2tZWqIHmXTlOrBQhhJOyBpBWaWU6QQoTmxp0HHK5_4kQNwPEcWGnmUrso4fZJXvJdyOeObWr8wnFbnwKm5OC5iTXbTo56mgLq-TygUfltsWMqwd2mN4uC0t7iEB2Qo3v1Rn_St3Mw00kxGTNxXxA3Dt3W6qmyweiFkXL2ZXC_jGsNO9_xLMet2Whh6lPwQ4RXou-qtLpG3fi4vXvHKrctJcPhTM"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Outliers</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Drama • 2h 30m</p>
+</div>
+</div>
+<!-- Movie Card 5 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="abstract swirl of colorful liquid smoke in shades of deep purple and gold with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEQRlUCroFJYQlz0P5DUHEGceKiz8oHIOf4AiEkzfLQCxfUOpp72MYPupPJwpF2lEHaVzxDVIPWJeKnP_I9vtYBr_ilXbBkQi16E7quHqc9T7fbQojbChUvYa-fSpFF1Qdi0t8og5ebu-TKVva9oclnZeHxmz5KrDdOKaYlvs0BDiRPU3I-0EDD-q7k53sYz4DPEc3xE3Lz5ZQOHAjYkSwzpi-61Gds_RX_sBk6_WDdTDQrzp_xssmr0jqi4Pe-3yg_HVQbJ9YgAw"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Stellar Core</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Documentary • 1h 20m</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Selection (Asymmetric Layout) -->
+<section class="px-8 md:px-16">
+<h2 class="font-headline text-2xl font-bold mb-8 tracking-tight">Top Picks for You</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[500px]">
+<div class="md:col-span-7 group relative overflow-hidden rounded-xl bg-surface-container-low cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="grand cinematic interior of an ancient library with high ceilings, dusty sunlight beams, and rows of old books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEQZ71-PQ8ZARiqs-vIX7-9RnaRjXNK5spRzfwcMhCyGZ_W0c8aN2d3AUPyTpR6EuoVThHe-tNj4oCSMc7-a2HAwPOV40EsSDPIldIkzh2C-CclfcEgHA79QDoY9ZGuaZPP_K-r3u6KOpC0RCcX9jdZkK2PovBp8LV-Eo2JztJUISW6vvsJTTFHJA8Hd4Ej7rJrqS3zgUfN7IL0RKdmHwItjjPlUJu4vZrFWHtS2kUGdWURXmWBHhwGRPI1yxULT0ppYhgzJhBBqU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8">
+<span class="font-label text-xs font-bold tracking-widest text-primary-container uppercase mb-2">Exclusively on Obsidian</span>
+<h3 class="font-headline text-4xl font-black mb-2">The Archive</h3>
+<p class="text-zinc-300 max-w-md line-clamp-2">Secrets buried for centuries are about to be unearthed in the world's most mysterious library.</p>
+</div>
+</div>
+<div class="md:col-span-5 grid grid-rows-2 gap-6">
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dramatic close up of vibrant neon signs reflecting in a dark window with rainy texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHtTspp5uH9n8GJ_cC9sxtnX4mgtPQg2eZSKacp8pC1Dkhe3e2IqnndIhfvuCt_wqW9YGa_YaxwXWfxfE6-XobZba3ebUN_M2NIofgCqfuZFqZdzugRiXaCmhASYHsivUYMR367beeSnC9Ohrv1KDqnKcZam7aoYIWmbJh5SjhAH9HsGFaan71ow-T_W0eLbqSRcSI3W04Nb2MZnFykX-NvHL5iPVRnHs0HrbCxDU7q30v36U0_LlMSHLvgfD-9dMzLCVWROuQ4LI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<h3 class="font-headline text-xl font-bold">Midnight Pulse</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="majestic wide shot of snow-capped mountains at twilight with a deep blue sky and first stars appearing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEmTZAHYeA-aZQcYp_tbkR6ckK9qFx6KkwjGw6b8-cNGZmTLDuG7rl4frq7Va1gFHuqZsCK2LkM2eu6TihHhtn3Y6Enwh_nocX4X0Y4D_Y-HEpXLTtUvVbg5u68nkO9JtrrIOa6WTslspSer5e8AMFfRsifhIR8gmIHfg9cP4H-CRQdX7o-CpOYy4Nz9HD9NMgIAB2qaQRnDXnjBIrEq0HN9C_4WbZSaKIUNsC2-Er0J2COVuOOhqocJbGo9_Mg6iNTePDufg5aCE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<h3 class="font-headline text-xl font-bold">Ascension</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Releases -->
+<section class="pl-8 md:pl-16">
+<h2 class="font-headline text-2xl font-bold mb-6 tracking-tight">New Releases</h2>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pr-8 md:pr-16">
+<!-- Movie Card 6 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="cinematic shot of a medieval sword plunged into a stone in a dark cavern with a single light source above" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-oBJLXbDH2XyhVctkkcVQLlXmH6-bX3hmFoX02-GQ9TYYluU7MIdeaOyzmvZUEbdZSDfeSpFiP4ZCC6X2gvVoWT0cobR-D1eTfo8S2OiWZXB6QdVZYC2a7Ln9kBIPlnJFunPtz-c-UoHFKMDGobGyRwuh3xZ9q1w4XfY2UVjbcH2iAd7iiE2VdEW0kwuKYXB-nV1wrFO4I7exmM7O_QVFTR8OrHuPkJwbUsghdwRhraQCrpBL8uQelKrQrTiJENFn1dzvTtXuqxQ"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Iron Legacy</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Fantasy • 2h 45m</p>
+</div>
+</div>
+<!-- Movie Card 7 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="aerial view of a winding road through a dense dark forest with vibrant orange autumn leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMe3p-m08hlcYQCIUyQ_-H9uMiYNTHYbe3LuM4Bn1iQq0xnZryt7BrMiDkhlt9s12Ij6cTUo4mBl5K7Z20ooMONWRWzmwZJ_5lNXR_ISq-VEJDnUOR61U4jaUEWJ84r8JJJcKBV5gOnbgsk22rt_2vsvn2eketV58e6PJB3dPrbvFPilAxUIUy8uKKbNh1n4U3-Htk7pFTqbskYE7FH47zOBcVp1T5E5Tow4n8VQh0EPdR5HWAe59KHZNH8TCBY9IhGUn7IhX-eQ0"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">The Long Road</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Drama • 1h 55m</p>
+</div>
+</div>
+<!-- Movie Card 8 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="deep space nebula with vibrant pink and blue gases and bright stars scattered throughout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz3lHUYRzC3N_ameniRu56LJ4Vm9k15_du-DbzXTyx4Z06yQ92imHNCyi8GwWMiQV06gtz_7kspkyU7wD57kQf9VwguJEQ-91NkRlkbrr6FD4bM_eLv6drvTbViSiIpn27SIKaH6DrpteGqQyO2twhd0bdr0xmeYjlSRavRRlEHMwfFfUrh9sRfIdacbnxt4t9KwDZBmSZ0TkKwQHOeRoZQGcZAUb-fz6cxhZZGrnN5m5MW5XShxietieO5D5PEXLgIZ9H_5Qp4d8"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Nebula</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Sci-Fi • 2h 10m</p>
+</div>
+</div>
+<!-- Movie Card 9 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="gritty close-up of a weathered leather boxing glove on a table in a dimly lit gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsHJ1LrFKe1nuW0ILWwal1EgM8ohkmLgarObHS0mgPEHy2qpusrH091_M18p0jMo6UWrYDKPZxSig5biQ4bfqO_SupskRwprIBFJhY-cbiMKoeTKGbsKx4VurBaCu6Tpe5vj9sY55YA1B3M2lElxK-T6O3oX0nbQr3IJR3fkG9aTEh6oOi7yyroBwEVC1S1NgwXPwONmI-X_UpIOq5ZAg-swM-f-Vpcmay1qktz55O77F15CE3cbp8znKhhmIo3-4ajNn5CfizzFc"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Final Round</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Sports • 2h 00m</p>
+</div>
+</div>
+<!-- Movie Card 10 -->
+<div class="flex-none w-48 md:w-64 group cursor-pointer">
+<div class="aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-low transition-transform duration-500 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="surreal shot of a man falling through a sky filled with floating clocks and gears" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsAYSBbVTTK87MHp5Zt0YF_kIHS8zJrWRIo_TRDq_NewTUotKZUmA2hfvrTA7jL4Ns0lWIg39pFqZ3YxPze0tyx02K0sppFnWizckZfrrmjrk04whFaEgjXaYASiurnoRy2G31jlqN4IIJ9ySOWD4VBjH6V9wnJFfC3sEbudSZQYCdzE8Bfzef826YwPaX1wupMD_qBfoaqkAkRGELYYJcRVL0c_6RpZgJ-FzQqiy9oTJPgAeq_aMBQanNtAiVW7r7ayse-JeXWSg"/>
+</div>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="font-headline text-sm font-bold">Chronos</h3>
+<p class="font-label text-xs text-zinc-500 mt-1">Mind-Bending • 2h 20m</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-12 mt-auto border-t border-zinc-800/50">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 font-['Inter'] text-sm tracking-wide">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-bold text-zinc-100">Obsidian Cinema</span>
+<p class="text-zinc-500">© 2024 Obsidian Cinema. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Privacy Policy</a>
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Terms of Service</a>
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Help Center</a>
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Contact Us</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-zinc-400 hover:text-white cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-zinc-400 hover:text-white cursor-pointer" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-zinc-950/90 backdrop-blur-xl border-t border-zinc-800/30 flex justify-around py-4 z-50">
+<a class="flex flex-col items-center gap-1 text-red-600" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px]">Discovery</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span class="text-[10px]">My List</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">Profile</span>
+</a>
+</div>
+</body></html>

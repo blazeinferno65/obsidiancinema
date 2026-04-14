@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#f8f9ff",
+                    "surface-tint": "#ffb4aa",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#5e3f3b",
+                    "outline": "#af8782",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "tertiary-fixed-dim": "#a7c8ff",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed-variant": "#004689",
+                    "tertiary": "#a7c8ff",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-surface-variant": "#e9bcb6",
+                    "on-primary-fixed": "#410001",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#001b3c",
+                    "background": "#131313",
+                    "secondary-container": "#921512",
+                    "tertiary-container": "#0072d7",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "primary-fixed": "#ffdad5",
+                    "on-secondary": "#690003",
+                    "on-primary-container": "#fff7f6",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "primary": "#ffb4aa",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-primary": "#c0000c",
+                    "primary-container": "#e50914",
+                    "on-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#410001",
+                    "on-secondary-container": "#ff9f93",
+                    "on-tertiary": "#003061",
+                    "on-primary-fixed-variant": "#930007",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#8e1210",
+                    "surface-bright": "#3a3939",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-dim": "#131313",
+                    "secondary": "#ffb4aa",
+                    "surface-variant": "#353534",
+                    "on-primary": "#690003"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+        background-color: rgba(19, 19, 19, 0.7);
+      }
+      .movie-card-overlay {
+        background: linear-gradient(to top, rgba(14, 14, 14, 0.95) 0%, rgba(14, 14, 14, 0.6) 40%, transparent 100%);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20 w-full bg-zinc-950/70 backdrop-blur-xl no-border bg-gradient-to-b from-zinc-900/50 to-transparent shadow-none font-['Be_Vietnam_Pro'] tracking-tight">
+<div class="text-2xl font-black tracking-tighter text-red-600 uppercase">Obsidian Cinema</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">Home</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">Discovery</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300" href="#">For You</a>
+<a class="text-white font-bold border-b-2 border-red-600 pb-1 hover:scale-105 transition-transform duration-300" href="#">My List</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-zinc-400 hover:text-zinc-100 transition-colors hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<!-- Header & Filters -->
+<header class="mb-12">
+<h1 class="text-5xl md:text-6xl font-headline font-black tracking-tighter mb-8">My List</h1>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-surface-container-low p-6 rounded-xl">
+<div class="flex flex-wrap items-center gap-3">
+<span class="text-label-sm font-bold tracking-widest text-zinc-500 uppercase mr-2">Filter By:</span>
+<button class="px-5 py-2 rounded-full bg-primary-container text-on-primary-container text-sm font-semibold transition-all">All Genres</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-surface-bright text-sm font-medium transition-all">Sci-Fi</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-surface-bright text-sm font-medium transition-all">Drama</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-surface-bright text-sm font-medium transition-all">Thriller</button>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto">
+<span class="text-label-sm font-bold tracking-widest text-zinc-500 uppercase mr-2">Sort:</span>
+<select class="bg-surface-container-lowest border-none text-sm font-medium rounded-lg px-4 py-2 focus:ring-1 focus:ring-primary-container cursor-pointer w-full md:w-48">
+<option>Date Added (Newest)</option>
+<option>Release Date</option>
+<option>Alphabetical</option>
+<option>IMDB Rating</option>
+</select>
+</div>
+</div>
+</header>
+<!-- Bento/Grid Movie Layout -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<!-- Movie Card 1 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="dramatic cinematic movie poster of a neon-lit futuristic city with a lone figure standing on a rainy balcony" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe7T68yHkY1cErXJQD5byfYIpcf5oeJRIym3-m9W5BWx0UIoIOP3oUZhzCyLB4tOR1akjmkI9BEqPIfCybOd3N64QqeqlkCNTHU8vBB_eWhqxGnKDjbw50C2sQJJQ7QAWJmU4VDJQBE6nvKETOEq8acfwnf-npRTma6V2T0fTLqtD6TRFpfXAP7YPqE01-XtSM1TlN9BkJORToUd2ylz04dH6fqL5fSlT4PwdYwN7YLDmTdOJdQ8FVOFcWECh7B-2kXkwFDmlI_XE"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Sci-Fi • 2024</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">NEON DREAMS</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Movie Card 2 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="vibrant abstract colors in motion resembling a cosmic explosion with deep purples and electric blues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUhO1dWFoAvGu1zNzFrbPSvCytiIPmgm1VpgnwvJmeiO3pWTyGJXgn7i4FqFWJxU1y2VtkxFq0k6rUuyvO6tKxFAtgsSwSiiWAqyBzPrOKpXCZAgBvIxCkBXTjxdfGTgaofrMto7UfxdSq1rm5HnEs9sD4wcyQsvbvW6HCgd3dVypB9HJ2QmirzjiPgO69P5paGqH0RWXLAMJ94J0yHDy0uCXX4KWHco4w3kBj0x38faQP96hRZkZI1YRgVmWE08Umfjo599XOyFk"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Documentary • 2023</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">BEYOND REACH</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Movie Card 3 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="moody high-contrast portrait of a woman in vintage clothing looking out of a rain-streaked window at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHYbqhbEo5VtnOYX48NRMN_h8LxNgJZMknt1kcoGtvmAnsjhJ8ng1u_QVsXRjPCiDRuA3YPoBeKJ3018XtdQmnhpx5IRTm85zryP8zEIdi4PfHHb-WMlB3purrJcluBzngOMr3ltrSeRJfZSJWRVN2OZ6jL9fvCW6j0t5Zbbsz2UcsX-dTdwsPxuta5_CB56rRX8CI-uQhbAOEzCRtDH7LkxLs3Umd7npWwjXBixfnzF2AQfOUZjEKv7R6UYDzNxVI0nKaoViuo9g"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Noir • 2024</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">SILENT ECHO</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Movie Card 4 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="black and white cinematic close-up of an old-fashioned film projector light lens glowing in the dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGSCIFzHxD3r71jdVBk0U0jM-63awtr2ZFybyj62Cw0suh8tBh2osQJDrbeqeTzcKnlgXNUFRaWKVE1ZjjaAClGY0J8nfzWGv4_3GGtR_Or9WdXDro6xnYaReprcyovFHTmkc7CQ0SNCPZFRS3WPxK724QTHt4YAbNi7RHZY5acWB5DELmb-bILfxBVdDTJmEAw0YxK6IXtDV0WrdWZUR7Bn5i9V3UcWSExN1n1WwgmScVCru3Ai8N16eKcTFD-KeQbFF1fe7s-W4"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Classic • 1968</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">THE PROJECTOR</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Movie Card 5 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="dense atmospheric pine forest shrouded in thick morning mist with tall silhouettes of trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiui_wuAi_1n-D0X6aDRf5e--AM4H5DIrdvcGIcbaLe5wdeGaV4xT6T55TRKn4sP3yK7NuAfGiYAMqa_v9T-IA4Zwibfzi8c8_ZKjkiwMQf46a5UFUDZ1AaNkeHPNIv6IyTXPBHEgAjD9oE3BqzVPC8gjtZBj5W5SxQtX-AkjLHkB20UEoM0KMPyMBBNhSarNd9f_bAERsHbRpfo9Kmy7oKzon_aTzsyd91Hqpz56VcJp9u9nvL8_3cTJxSaVDjnorfPHd7yNITnU"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Thriller • 2023</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">WHISPERING WOODS</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Movie Card 6 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="cinematic shot from the inside of a dark theater with red velvet seats looking at an empty screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ossoe2AF4Q2_7UWZA7kVcEBCXxX4EVj2R6gM5Kgq5nhnsdAcdiaGodN9aCXmXy2ZJfKgwJYkhPPyAU3rqYF7eccdrO_Iy-I0a6XUCxDK8_sPyMLZB1EpTAHh7i8K0VRgsEqVAgBuDfvlLryQ9MnToCAtxJz6xtxCQL1usn-1I7MC8jpZq7QtbmEkInGxXdvX7zplYduZGR3Dxmgb-EdA96TvZKjjQfzy52OjS2UtdXN8td3V3EaJwltkmRrZWM7KN4rcZj-nYTA"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Drama • 2022</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">THE AUDIENCE</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Movie Card 7 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="satellite view of earth at night showing city lights illuminating the continents and dark oceans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8b9sgLDY7Mo3D2M_H8JH3l76DlD40x2-j3sq_4eavJXtmtoAhV4pL3rgaSAil_uwLhdB7om6IQGksu9pFb38A-mGP8F-uljR9U1ldzrg_WY4v4K-yGEAOJl4uAD-Sj14le7pSblR3fZuJHziKRFi3otnDO8dNRE6q_Oe7uQriyGnsTnKZnuEipyOncKN_S9fgKka0S0GgvX5_2yUJr7a060Kh--YhgenXNA-nkQNGsJznaKsIroSKwAHFkwOYK2tSRfrd5PM0edE"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Sci-Fi • 2024</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">ORBITAL DRIFT</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Movie Card 8 -->
+<div class="group relative aspect-[2/3] bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:z-10 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="extreme close up of an eye with a reflection of a digital interface inside the pupil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjx95PbHnjh2tzxh6AB9wsQ_FT9BpQ02ftIJSOnS9nFkBRnnzlLxYqtJyXqKSzz3W9tYK6qFz-_aTTe_7a0wZ5ZeLic5nhd1GjY06s7-MNhVzeI8AZMBkB3krb-qZHkKOrZYlC0m53KRA_obbFT4GHqJU2mrzcGvceJtBBrO_ncs8j1L6jTuhbBHQ-Uxdte2uhI3t8tiraUAsU_wUUrw2vNe-fKt6ggZirlW-c8gbwLkvdzwI6sdysL0T2MGhlLfijaIRDENUAFvI"/>
+<div class="movie-card-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex justify-between items-start absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-2 bg-zinc-950/80 backdrop-blur-md rounded-full text-white hover:text-red-600 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1 block">Tech-Thriller • 2024</span>
+<h3 class="text-lg font-headline font-bold leading-tight mb-2">SYNAPSE</h3>
+<div class="flex gap-2">
+<button class="flex-1 bg-white text-black py-2 rounded-md text-xs font-bold hover:bg-zinc-200 transition-colors">WATCH NOW</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State / Add Suggestion Card -->
+<div class="group relative aspect-[2/3] border-2 border-dashed border-zinc-800 rounded-lg flex flex-col items-center justify-center p-8 text-center hover:border-red-600 transition-colors cursor-pointer bg-surface-container-low/30">
+<span class="material-symbols-outlined text-4xl text-zinc-600 group-hover:text-red-600 mb-4">add_circle</span>
+<p class="text-sm font-medium text-zinc-500 group-hover:text-zinc-300">Find something new to add to your list</p>
+</div>
+</div>
+<!-- Suggestion Section -->
+<section class="mt-24">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-headline font-bold">Recommended for your List</h2>
+<button class="text-red-600 font-bold text-sm tracking-widest uppercase hover:underline">See More</button>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+<div class="flex-none w-64 snap-start">
+<div class="aspect-[16/9] rounded-lg overflow-hidden mb-3 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="dark moody urban alleyway at night with steam rising and soft yellow lamp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMXB18HAdriyjQQzTfTsSKKlYi1o0vy1MGNDF1kVMpUo6ZJENhikaKjx5cWHFkz6llnwcsI23gR2Lnp-X3FUCBQPpLkoa0Hb4zy3GnImMJ-3UACJmwhoDzF1BZ4MCTugCLRg2UYLUdB9GrTdrIAt7-C2CC2hGi3r74HKYmTo3TP95c2Hlpr3b-wD_rF88Sm5C-zngmiCs1rR8sgnNwRPK77lYM3SYN1u7wXamt_9bzjPQk_pm-WirFn0kw2MG0Xo-WOpyXZlriNZw"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-all"></div>
+<button class="absolute bottom-2 right-2 p-2 bg-primary-container text-on-primary-container rounded-full shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm">NIGHT FALLS</h4>
+<p class="text-xs text-zinc-500">Action • 2024</p>
+</div>
+<div class="flex-none w-64 snap-start">
+<div class="aspect-[16/9] rounded-lg overflow-hidden mb-3 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="underwater shot with sunlight beams piercing through the deep blue ocean water surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQzMoVnWp0OgfmiTwqhuE_5donTDWNvN98jpZTi3xvKRXFvVj_-wwbisYqcPhnIBybYZ52-OMJf_eixKJYJczYqGCliLtV1i3Xc7yPD4f3ybf3XtTbH0zw0sMRxpZrebQJZxsQtSFTQN5H_wlc1s_MDc0tH7jRPxccO3J75xikI65IoZR5os1MXt8TvjOy2dZjFplAP_vVUMiHNesrjIKpEoBncY_V6QNLDk5DCrNWDmtXRQC-R_ePYDsL7n4QceyOesjnY4lEOTs"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-all"></div>
+<button class="absolute bottom-2 right-2 p-2 bg-primary-container text-on-primary-container rounded-full shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm">ABYSSAL</h4>
+<p class="text-xs text-zinc-500">Horror • 2024</p>
+</div>
+<div class="flex-none w-64 snap-start">
+<div class="aspect-[16/9] rounded-lg overflow-hidden mb-3 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="dramatic wide shot of a deep desert canyon with red rock layers and sunset sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ciRHt2l6F8A2eMsidvVUn7Y7JtCWX8ajWJuUfM-EfhglmJsIxGyzVC9aZ8xGILgZIUwFikqi4nCTd0XK9z5gpKq0xh5uT6_mHjEtL_QAOizQOVUQ_0wYCIoBjUnPI_xfjwQwg7D3K88qb-VjHGZUz_8y5S08px4261hzVc2dZ0XD1qMHriL3Kzc_zOQ-C8SBQgBRaw1iiJuIZCIrvg7Z_mM3O2wzyrKKa3QKm8F4m8oiWC0n5MMWDAYW04a_W2emMeNUeDGrY64"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-all"></div>
+<button class="absolute bottom-2 right-2 p-2 bg-primary-container text-on-primary-container rounded-full shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm">THE CANYON</h4>
+<p class="text-xs text-zinc-500">Western • 2023</p>
+</div>
+<div class="flex-none w-64 snap-start">
+<div class="aspect-[16/9] rounded-lg overflow-hidden mb-3 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="soft warm aesthetic shot of a cozy living room with a lit fireplace and books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8AMizbpduebE72MpTG6xI1kCCD-aRZUpkAKFctpCmoepnqvLz0PDx1TbvMFCMPyMhYxhzxeSsFESgW401MjOm_WfXAXwai1DekyEofzQAsOKfN08M7YqF_JQ2tm5T2sQDWpsPpQq-PV5ZuZChBbsPAq4eSzN1uXnGpkA2bsluBuyzCNs_gdFcoYQgtbg7e7k_gFgahOOzajP_wvwfLQNCVU82K-sxF-O9uIV8tMEQiuIHkWuUhjvPru8Y2vLxy6ipIM5XWJ7E-s0"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-all"></div>
+<button class="absolute bottom-2 right-2 p-2 bg-primary-container text-on-primary-container rounded-full shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm">STAY AWHILE</h4>
+<p class="text-xs text-zinc-500">Romance • 2024</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-12 mt-auto border-t border-zinc-800/50 font-['Inter'] text-sm tracking-wide">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-bold text-zinc-100">Obsidian Cinema</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Privacy Policy</a>
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Terms of Service</a>
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Help Center</a>
+<a class="text-zinc-500 hover:text-red-600 transition-colors" href="#">Contact Us</a>
+</div>
+<p class="text-zinc-500">© 2024 Obsidian Cinema. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
